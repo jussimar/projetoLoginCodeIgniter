@@ -37,7 +37,7 @@
 						<hr class="my-4">
 						<div class="form-group">
 							<div class="row">
-								<a href="#" class="btn btn-primary btn-block">Realizar Cadastro </a>
+								<a href="<?=base_url()?>cadastro" class="btn btn-primary btn-block">Realizar Cadastro </a>
 							</div>
 						</div>
 					</div>
