@@ -15,12 +15,12 @@
 				<h1>Cadastro de Pessoas</h1>
 			</div>
 		</div>
-		<form action="">
+		<form action="<?=base_url('inserir')?>" method="post">
 			<div class="form-group">
 				<div class="row">
 					<div class="col-12">
 						<label for="nome">Nome:</label>
-						<input type="text" class="form-control" id="nome">
+						<input type="text" class="form-control" id="nome" name="nome">
 					</div>
 				</div>
 			</div>
@@ -28,11 +28,11 @@
 				<div class="row">
 					<div class="col-6">
 						<label for="email">E-mail:</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" name="email">
 					</div>
 					<div class="col-6">
 						<label for="senha">Senha:</label>
-						<input type="passoword" class="form-control" id="senha">
+						<input type="password" class="form-control" id="senha" name="senha">
 					</div>
 				</div>
 			</div>
