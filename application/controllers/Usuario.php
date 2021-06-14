@@ -12,4 +12,9 @@ class Usuario extends CI_Controller{
 		$usuario->inserir();
 		redirect(base_url('login'));
 	}
+
+	public function entrar(){
+		$usuario = new UsuarioModel;
+		$usuario->logar();
+	}
 }

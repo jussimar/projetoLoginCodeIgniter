@@ -15,17 +15,17 @@
 				<div class="jumbotron form-login">
 					<h1 class="display-4">Login</h1>
 					<hr class="my-4">
-						<form action="">
+						<form action="<?=base_url('entrar')?>" method="post">
 						<div class="form-group">
 							<div class="row">
 								<label for="email">E-mail:</label>
-								<input type="email" id="email" class="form-control" placeholder="digite aqui seu e-mail ...">
+								<input type="email" id="email" name="email" class="form-control" placeholder="digite aqui seu e-mail ...">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="row">
 								<label for="senha">Senha:</label>
-								<input type="password" id="senha" class="form-control">
+								<input type="password" id="senha" class="form-control" name="senha">
 							</div>
 						</div>
 						<div class="form-group">

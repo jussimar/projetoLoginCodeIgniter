@@ -13,4 +13,19 @@ class UsuarioModel extends CI_Model{
 		return $this->db->insert("tb_usuario",$data);
 	}
 
+	public function logar(){
+		$email = $this->input->post('email');
+		$senha = md5($this->input->post('senha'));
+
+		$this->db->where('ds_email',$email);
+		$this->db->where('cod_senha',$senha);
+
+		$usuario =  $this->db->get("tb_usuario")->row_array();
+
+		if($usuario){
+			redirect(base_url('home'));
+		}else{
+			redirect(base_url('login'));
+		}
+	}
 }
