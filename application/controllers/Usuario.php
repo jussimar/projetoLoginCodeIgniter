@@ -17,4 +17,10 @@ class Usuario extends CI_Controller{
 		$usuario = new UsuarioModel;
 		$usuario->logar();
 	}
+
+	public function sair(){
+		$usuario = new UsuarioModel;
+		$usuario->sair();
+	}
+
 }
