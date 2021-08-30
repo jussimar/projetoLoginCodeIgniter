@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="offset-4 col-4">
 				<div class="jumbotron form-login">
-					<h1 class="display-4">Login</h1>
+					<h1 class="display-4">Login:</h1>
 					<hr class="my-4">
 						<form action="<?=base_url('entrar')?>" method="post">
 						<div class="form-group">
