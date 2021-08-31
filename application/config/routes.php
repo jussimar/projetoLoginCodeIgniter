@@ -53,5 +53,7 @@ $route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['inserir']['post'] = 'usuario/cadastrarUsuario';
+$route['inserirEndereco']['post'] = 'usuario/cadastrarEndereco';
 $route['entrar']['post'] = 'usuario/entrar';
 $route['sair'] = 'usuario/sair';
+$route['lista'] = 'usuario/listarEndereco';

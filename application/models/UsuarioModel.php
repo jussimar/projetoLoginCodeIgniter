@@ -13,6 +13,19 @@ class UsuarioModel extends CI_Model{
 		return $this->db->insert("tb_usuario",$data);
 	}
 
+	public function inserirEndereco(){
+		$data =  array(
+			'ds_rua' => $this->input->post('rua'),
+			'nr_local' => $this->input->post('numero'),
+			'ds_bairro' => $this->input->post('bairro'),
+			'ds_cidade' => $this->input->post('cidade'),
+			'ds_estado' => $this->input->post('estado')
+		);
+
+		return $this->db->insert("tb_endereco",$data);
+	}
+
+
 	public function logar(){
 		$email = $this->input->post('email');
 		$senha = md5($this->input->post('senha'));
@@ -33,5 +46,10 @@ class UsuarioModel extends CI_Model{
 	public function sair(){
 		$this->session->unset_userdata('logado');
 		redirect(base_url('login'));
+	}
+
+	public function listarEndereco(){
+		$query = $this->db->get("tb_endereco");
+		return $query->result();
 	}
 }

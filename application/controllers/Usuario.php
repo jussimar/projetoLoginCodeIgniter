@@ -13,6 +13,18 @@ class Usuario extends CI_Controller{
 		redirect(base_url('login'));
 	}
 
+	public function cadastrarEndereco(){
+		$usuario = new UsuarioModel;
+		$usuario->inserirEndereco();
+		redirect(base_url('lista'));
+	}
+
+	public function listarEndereco(){
+		$usuario = new UsuarioModel;
+		$data['data'] = $usuario->listarEndereco();
+		$this->load->view('lista',$data);
+	}
+
 	public function entrar(){
 		$usuario = new UsuarioModel;
 		$usuario->logar();

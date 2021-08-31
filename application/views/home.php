@@ -39,38 +39,42 @@
 					<div class="col-4">
 						<button class="btn btn-primary btn-block buscar" id="buscar">Buscar</button>
 					</div>
+
+					<div class="col-4">
+						<a class="btn btn-primary btn-block buscar" href="<?=base_url('lista') ?>" >Lista de Endereços</a>
+					</div>
 				</div>
-				<form action="">
+				<form action="<?=base_url('inserirEndereco')?>" method="post">
 				<div class="row">
 					<div class="col-12">
 						<label for="">Rua:</label>
-						<input type="text" class="form-control" id="rua">
+						<input type="text" class="form-control" id="rua" name="rua">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-2">
 						<label for="">Numero:</label>
-						<input type="text" class="form-control">
+						<input type="text" class="form-control" name="numero">
 					</div>
 					<div class="col-4">
 						<label for="">Bairro:</label>
-						<input type="text" class="form-control" id="bairro"> 
+						<input type="text" class="form-control" id="bairro" name="bairro"> 
 					</div>
 					<div class="col-4">
 						<label for="">Cidade:</label>
-						<input type="text" class="form-control" id="cidade">
+						<input type="text" class="form-control" id="cidade" name="cidade">
 					</div>
 					<div class="col-2">
 						<label for="">Estado:</label>
-						<input type="text" class="form-control" id="estado">
+						<input type="text" class="form-control" id="estado" name="estado"> 
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-6">
-						<button class="btn btn-success btn-block buscar">Salvar</button>
+						<button class="btn btn-success btn-block buscar" type="submit">Salvar</button>
 					</div>
 					<div class="col-6">
-						<button class="btn btn-danger btn-block buscar">Cancelar</button>
+						<button class="btn btn-danger btn-block buscar" type="reset">Cancelar</button>
 					</div>
 				</div>
 			</form>
